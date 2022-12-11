@@ -101,4 +101,17 @@ object Syntax {
 
   // println(boolValue)
   // println(intValue)
+
+  // control statements
+  for (x <- 0 to 10) println(x)
+  for { e <- 10 until 1 by -5 } println(e)
+  val ans = for ( i <- 1 to 5; if i % 2 == 0) yield i
+
+  while false do println("no!")
+
+  val powerfulSwitch: Int = ans match {
+    case x if ans.head > 1 => ans.head
+    case y: IndexedSeq[Int] => y.head
+    case _ => 0
+  }
 }
