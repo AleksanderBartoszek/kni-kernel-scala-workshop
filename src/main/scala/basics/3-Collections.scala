@@ -13,4 +13,21 @@ object Collections {
 
   val listFromArray: List[Int]    = intArray.toList
   val vectorFromList: Vector[Int] = intList.toVector
+
+  /** EXERCISE 1
+    *
+    * Using Range and `toList` conversion create a list of first 100 integers.
+    */
+  val first100: List[Int] = ???
+
+  /** EXERCISE 2
+    *
+    * Create a tuple of user data and ascribe the correct type.
+    */
+  val id: Int           = 42
+  val username: String  = "coyote17"
+  val email: String     = "coyote@acme.com"
+  val createdAt: Long   = 1614902400L
+  val isActive: Boolean = true
+  val userRow           = ???
 }
