@@ -3,7 +3,7 @@ package basics
 import annotation.nowarn
 
 @nowarn
-object Syntax {
+object Syntax extends App{
 
   // built-in data types
   "Scala!" // String
@@ -37,6 +37,11 @@ object Syntax {
     val welcome = s"Hi $name!"
     val message = s"$welcome $title"
     message
+  }
+
+  val six = if ( four > 3 ) {
+    println("hello")
+    6
   }
 
   // multiple arguments
@@ -105,7 +110,7 @@ object Syntax {
   // control statements
   for (x <- 0 to 10) println(x)
   for { e <- 10 until 1 by -5 } println(e)
-  val ans = for ( i <- 1 to 5; if i % 2 == 0) yield i
+  val ans: IndexedSeq[Int] = for ( i <- 1 to 5; if i % 2 == 0) yield i
 
   while false do println("no!")
 
@@ -114,4 +119,5 @@ object Syntax {
     case y: IndexedSeq[Int] => y.head
     case _ => 0
   }
+  println(s"match: $powerfulSwitch")
 }
